@@ -28,6 +28,5 @@ description = "The Atlas cloud provider name"
 
 # The Atlas provider instance sizz, name
 variable "atlas_provider_instance_size_name"{
-type        = string
 description = "The Atlas provider instance size name"
 }
