@@ -1,12 +1,14 @@
 # Configure the MongoDB Atlas Provider
 terraform {
-    required_providers {
-        mongodbatlas = {
-            source = "mangadb/mongodbatlas"
-            version = ">=0.8.2"
-        }
+  required_providers {
+    mongodbatlas = {
+      source  = "mongodb/mongodbatlas"
+      version = "~> 1.9"
     }
+  }
+  required_version = ">= 1.0"
 }
+
 provider "mongoddbatlas" {
     public_key  =  var.public_key
     private_key =  var.private_key
