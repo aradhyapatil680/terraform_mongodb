@@ -1,12 +1,23 @@
 # Configure the MongoDB Atlas Provider
 terraform {
+  required_version = ">= 0.13"
+
   required_providers {
-    mongodbatlas = {
-      source  ="hashicorp/mongodbatlas"
-      version = "~> 1.9"
+    mongodb = {
+      source = "registry.terraform.io/FelGel/mongodb"
+      version = "9.9.9"
     }
   }
-  required_version = ">= 1.0"
+}
+
+provider "mongodb" {
+  host = "localhost"
+  port = "27017"
+  username = "root"
+  password = "root"
+  tls = false
+  auth_database = "admin"
+  #proxy = "socks5://localhost:1080"
 }
 
 provider "mongoddbatlas" {
