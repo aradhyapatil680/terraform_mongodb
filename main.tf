@@ -16,7 +16,7 @@ provider "mongoddbatlas" {
 resource "mongodb_cluster" "chetu" {
 project_id                      = "var.atlasprojectid"
 name                            = "test-terraform"
-num shards                      =  1
+# num shards                      =  1
 replication_factor              =  3
 provider_backup_enabled         = true
 # auto scaling_disk_gb_enabled    = var.auto_scaling_disk_gb_enabled 
