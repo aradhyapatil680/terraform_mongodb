@@ -4,8 +4,8 @@ terraform {
 
   required_providers {
     mongodb = {
-      source = "registry.terraform.io/FelGel/mongodb"
-      version = "9.9.9"
+      source = "registry.terraform.io/hashicorp/mongodbatlas"
+      
     }
   }
 }
@@ -14,11 +14,8 @@ provider "mongodb" {
   host = "localhost"
   port = "27017"
   username = "chetan"
-  password = "Shri@2406
-  tls = false
-  auth_database = "admin"
-  #proxy = "socks5://localhost:1080"
-}
+  password = "Shri@2406"
+ }
 
 provider "mongoddbatlas" {
     public_key  =  var.public_key
