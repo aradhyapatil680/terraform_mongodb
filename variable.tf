@@ -21,7 +21,6 @@ type        = string
 description = "The Atlas Project cluster region"
 }
 
-
 #The Atlas cloud provider_name
 variable "atlas_provider_name" {
 type        = string
