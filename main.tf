@@ -13,8 +13,8 @@ terraform {
 provider "mongodb" {
   host = "localhost"
   port = "27017"
-  username = "root"
-  password = "root"
+  username = "chetan"
+  password = "Shri@2406
   tls = false
   auth_database = "admin"
   #proxy = "socks5://localhost:1080"
