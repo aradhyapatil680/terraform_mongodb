@@ -16,8 +16,8 @@ provider "mongoddbatlas" {
 resource "mongodb_cluster" "chetu" {
 project_id                      = "var.atlasprojectid"
 name                            = "test-terraform"
-num shards                      = "1"
-replication_factor              = "3"
+num shards                      =  1
+replication_factor              =  3
 provider_backup_enabled         = true
 # auto scaling_disk_gb_enabled    = var.auto_scaling_disk_gb_enabled 
 mongo_db_major_version          = var.mongo_db_major_version
@@ -26,10 +26,11 @@ mongo_db_major_version          = var.mongo_db_major_version
 provider_name                   = var.atlas_provider_name
 provider_instance_size_name     = var.atlas_instance_size_name
 provider_region_name            = var.cluster_region
+}
 
 # Use terraform output to display connection strings.
 output "connection_strings" {
-value = ["$(mongodbatlas_cluster.pov-terraform.connection_strings}"]
+value = ["$(mongodbatlas_cluster.chetu.connection_strings}"]
 }
 
 # Create an Atlas Admin Database User
